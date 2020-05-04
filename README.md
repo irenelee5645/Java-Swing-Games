@@ -24,3 +24,27 @@ Drawing Panel
      - rotate
      - resize
      - undo/redo
+     
+
+Shooting Game
+- An archaic game that uses a keyboard
+- Goal: to shoot a chicken moving across the screen
+- How to play:
+  - use arrow keys to move the gun
+  - use space bar to shoot
+ 
+Calculator
+- possible operations :
+  - multiplication/division
+  - addition/ subtraction
+  - square/ cube
+
+Puzzle Game
+- press shuffle to shuffle around the pieces
+- use arrow keys to move the whtie piece to reorganize the puzzle
+
+
+Rock Paper Scissors Game
+
+Bingo Game
+
