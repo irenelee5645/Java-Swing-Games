@@ -87,8 +87,8 @@ class MyFrame extends JFrame{
 	JToolBar toolbar=new JToolBar();
 	Stack<MyShapes> saved=new Stack<MyShapes>();
 	Stack<MyShapes> undone=new Stack<MyShapes>();
-	JButton redoB=new JButton(new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\images\\arrow_redo.png"));
-	JButton undoB=new JButton(new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\images\\arrow_undo.png"));
+	JButton redoB=new JButton(new ImageIcon("redo.png"));
+	JButton undoB=new JButton(new ImageIcon("undo.png"));
 
 	Color mybasiccolors[]=new Color[]{
 			Color.BLACK,
@@ -108,14 +108,14 @@ class MyFrame extends JFrame{
 		JMenu fileMenu=new JMenu("File");
 		
 		//new menuitem
-		ImageIcon img1=new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\images\\new.png");
+		ImageIcon img1=new ImageIcon("new.png");
 		JMenuItem newFileMenuItem=new JMenuItem("  New",img1);
 		fileMenu.add(newFileMenuItem);
 		newFileMenuItem.addActionListener(new NewFileActionListener());
 		fileMenu.addSeparator();
 
 		//open menuitem
-		ImageIcon img2=new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\images\\open.png");
+		ImageIcon img2=new ImageIcon("open.png");
 		JMenuItem openFileMenuItem=new JMenuItem("  Open",img2);
 		openFileMenuItem.addActionListener(new FileOpenActionListener());
 		fileMenu.add(openFileMenuItem);
@@ -123,7 +123,7 @@ class MyFrame extends JFrame{
 		fileMenu.addSeparator();
 
 		//open menuitem
-		ImageIcon img3=new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\images\\save.png");
+		ImageIcon img3=new ImageIcon("save.png");
 		JMenuItem saveFileMenuItem=new JMenuItem("  Save",img3);
 		saveFileMenuItem.addActionListener(new SaveFileActionListener());
 		fileMenu.add(saveFileMenuItem);
@@ -133,7 +133,7 @@ class MyFrame extends JFrame{
 	
 	public void createToolBar(){
 		//move cursor--
-		ImageIcon img1=new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\images\\cursor.png");
+		ImageIcon img1=new ImageIcon("cursor.png");
 		JButton editbutton=new JButton(img1);
 		editbutton.setToolTipText("edit shapes");
 		editbutton.addActionListener(new EditActionListener());
@@ -268,7 +268,7 @@ class MyFrame extends JFrame{
 		toolbar.addSeparator();
 		
 		//eraseButton
-		JButton eraseB=new JButton(new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\images\\eraser.png"));
+		JButton eraseB=new JButton(new ImageIcon("C:\\Users\\ì—°ì•„\\Desktop\\images\\eraser.png"));
 		eraseB.addActionListener(new ActionListener(){
 
 			@Override
