@@ -212,7 +212,7 @@ class Chicken/* implements Runnable*/{
 	int x,y;
 	int dx=10;
 	int imgSize=40;
-	ImageIcon img=new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\images\\chicken.jpg");
+	ImageIcon img=new ImageIcon("chicken.jpg");
 	Chicken(){
 		x=MyFrame.frameSize/5;
 		y=0;
