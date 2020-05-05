@@ -15,7 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 class MyFrame extends JFrame implements ActionListener, KeyListener {
-	ImageIcon icon=new ImageIcon("C:\\Users\\¿¬¾Æ\\Desktop\\flowerpic.jpg");
+	ImageIcon icon=new ImageIcon("flowerpic.jpg");
 	// 	ImageIcon icon=new ImageIcon("flowerpic.jpg");
 	Image img=icon.getImage();
 	int numr,numc;
