@@ -82,19 +82,19 @@ class MyFrame extends JFrame implements ActionListener{
 			result.setText("you lost..."+mychoice+" "+opponent);
 		
 	}
-//	public void addpic(int me,int comp){
-//		BufferedImage img1=null;
-//		BufferedImage img2=null;
-//		BufferedImage img3=null;
-//		try{
-//			img1=ImageIO.read(new File(""));
-//			img1=ImageIO.read(new File(""));
-//			img1=ImageIO.read(new File(""));
-//		}catch(Exception e){
-//			System.out.println("file could not be found...");
-//		}
+	public void addpic(int me,int comp){
+		BufferedImage img1=null;
+		BufferedImage img2=null;
+		BufferedImage img3=null;
+		try{
+			img1=ImageIO.read(new File("rock.jpg"));
+			img1=ImageIO.read(new File("paper.jpg"));
+			img1=ImageIO.read(new File("scissors.jpg"));
+		}catch(Exception e){
+			System.out.println("file could not be found...");
+		}
 		
-//	}
+	}
 	public int showresult(int me, int comp){
 		//same=0 melose=-1 mewin=1
 		if(me==comp)
