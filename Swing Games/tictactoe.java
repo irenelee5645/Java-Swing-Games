@@ -268,7 +268,7 @@ class MyFrame extends JFrame implements MouseListener{
 }
 
 
-public class bingogame {
+public class TicTacToe {
 public static void main(String args[]){
 	MyFrame mm=new MyFrame(5);
 }

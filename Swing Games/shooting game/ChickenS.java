@@ -1,4 +1,4 @@
-package p6;
+
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -261,7 +261,7 @@ class Bullet{
 	}
 }
 
-public class p6 {
+public class ChickenS {
 
 	public static void main(String[] args) {
 		MyFrame mm=new MyFrame();
