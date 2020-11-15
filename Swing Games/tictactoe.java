@@ -1,4 +1,4 @@
-package bingogame;
+
 
 import java.awt.Color;
 import java.awt.Component;
@@ -32,7 +32,7 @@ class MyButton extends JButton{
 
 
 class MyFrame extends JFrame implements MouseListener{
-	MyButton []buttons=new MyButton[100];
+	MyButton []buttons=new MyButton[9];
 	boolean bingo=false;
 	boolean players=false;
 	boolean done=false;
@@ -42,11 +42,12 @@ class MyFrame extends JFrame implements MouseListener{
 	};
 	JLabel pp=new JLabel("player 1");
 
-	MyFrame(){
+	MyFrame(int gridSize){
+		buttons = new MyButton[gridSize * gridSize];
 		setTitle("Bingo!!");
 		JPanel panel1=new JPanel();
-		panel1.setLayout(new GridLayout(10,10,5,5));
-		for(int i=0;i<100;i++){
+		panel1.setLayout(new GridLayout(gridSize,gridSize,5,5));
+		for(int i=0;i<buttons.length;i++){
 			buttons[i]=new MyButton(" ");
 			buttons[i].setPreferredSize(new Dimension(60,60));
 			buttons[i].addMouseListener(this);
@@ -269,6 +270,6 @@ class MyFrame extends JFrame implements MouseListener{
 
 public class bingogame {
 public static void main(String args[]){
-	MyFrame mm=new MyFrame();
+	MyFrame mm=new MyFrame(5);
 }
 }
