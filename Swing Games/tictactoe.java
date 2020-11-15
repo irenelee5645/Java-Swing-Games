@@ -33,6 +33,7 @@ class MyButton extends JButton{
 
 class MyFrame extends JFrame implements MouseListener{
 	MyButton []buttons=new MyButton[9];
+	int gs=3;
 	boolean bingo=false;
 	boolean players=false;
 	boolean done=false;
@@ -43,10 +44,11 @@ class MyFrame extends JFrame implements MouseListener{
 	JLabel pp=new JLabel("player 1");
 
 	MyFrame(int gridSize){
-		buttons = new MyButton[gridSize * gridSize];
+		gs = gridSize;
+		buttons = new MyButton[gs * gs];
 		setTitle("Bingo!!");
 		JPanel panel1=new JPanel();
-		panel1.setLayout(new GridLayout(gridSize,gridSize,5,5));
+		panel1.setLayout(new GridLayout(gs,gs,5,5));
 		for(int i=0;i<buttons.length;i++){
 			buttons[i]=new MyButton(" ");
 			buttons[i].setPreferredSize(new Dimension(60,60));
@@ -167,11 +169,11 @@ class MyFrame extends JFrame implements MouseListener{
 	public boolean downCheck(Vector<Integer> aa){
 		int j;
 		int index;
-		int bingorow[]=new int[5];
+		int bingorow[]=new int[gs];
 		for(int i=0;i<aa.size();i++){
 			index=aa.elementAt(i);
-			for( j=1;j<5;j++){
-				index+=10;
+			for( j=1;j<gs;j++){
+				index+=gs;
 				if(aa.contains(Integer.valueOf(index)))
 					{bingorow[j]=index;
 					continue;
@@ -179,10 +181,10 @@ class MyFrame extends JFrame implements MouseListener{
 				else
 					break;
 			}
-			if(j==5)
+			if(j==gs)
 				{
 				bingorow[0]=aa.elementAt(i);
-				for(int k=0;k<5;k++){
+				for(int k=0;k<gs;k++){
 					buttons[bingorow[k]].setBackground(Color.cyan);
 				}
 				return true;
@@ -193,10 +195,10 @@ class MyFrame extends JFrame implements MouseListener{
 	public boolean sideCheck(Vector<Integer> aa){
 		int j;
 		int index;
-		int bingorow[]=new int[5];
+		int bingorow[]=new int[gs];
 		for(int i=0;i<aa.size();i++){
 			index=aa.elementAt(i);
-			for( j=1;j<5;j++){
+			for( j=1;j<gs;j++){
 				if(aa.contains(Integer.valueOf(++index)))
 					{bingorow[j]=index;
 					continue;
@@ -207,7 +209,7 @@ class MyFrame extends JFrame implements MouseListener{
 			if(j==5)
 				{
 				bingorow[0]=aa.elementAt(i);
-				for(int k=0;k<5;k++){
+				for(int k=0;k<gs;k++){
 					buttons[bingorow[k]].setBackground(Color.cyan);
 				}
 				return true;
@@ -218,21 +220,21 @@ class MyFrame extends JFrame implements MouseListener{
 	public boolean leftDownCheck(Vector<Integer> aa){
 		int j;
 		int index;
-		int bingorow[]=new int[5];
+		int bingorow[]=new int[gs];
 		for(int i=0;i<aa.size();i++){
 			index=aa.elementAt(i);
-			for( j=1;j<5;j++){
-				if(aa.contains(Integer.valueOf((index+=11))))
+			for( j=1;j<gs;j++){
+				if(aa.contains(Integer.valueOf((index+=gs+1))))
 					{bingorow[j]=index;
 					continue;
 					}
 				else
 					break;
 			}
-			if(j==5)
+			if(j==gs)
 				{
 				bingorow[0]=aa.elementAt(i);
-				for(int k=0;k<5;k++){
+				for(int k=0;k<gs;k++){
 					buttons[bingorow[k]].setBackground(Color.cyan);
 				}
 				return true;
@@ -247,17 +249,17 @@ class MyFrame extends JFrame implements MouseListener{
 		for(int i=0;i<aa.size();i++){
 			index=aa.elementAt(i);
 			for( j=1;j<5;j++){
-				if(aa.contains(Integer.valueOf((index+=9))))
+				if(aa.contains(Integer.valueOf((index+=gs-1))))
 					{bingorow[j]=index;
 					continue;
 					}
 				else
 					break;
 			}
-			if(j==5)
+			if(j==gs)
 				{
 				bingorow[0]=aa.elementAt(i);
-				for(int k=0;k<5;k++){
+				for(int k=0;k<gs;k++){
 					buttons[bingorow[k]].setBackground(Color.cyan);
 				}
 				return true;
@@ -268,7 +270,7 @@ class MyFrame extends JFrame implements MouseListener{
 }
 
 
-public class TicTacToe {
+public class tictactoe {
 public static void main(String args[]){
 	MyFrame mm=new MyFrame(5);
 }
