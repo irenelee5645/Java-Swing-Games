@@ -88,7 +88,7 @@ class MyFrame extends JFrame implements MouseListener{
 		else
 			pp.setText("Player 2");
 		if(bingoCheck()){
-			if(!players)
+			if(players)
 				pp.setText("Player 1 won");
 			else
 				pp.setText("Player 2 won");
@@ -147,7 +147,7 @@ class MyFrame extends JFrame implements MouseListener{
 	
 	public boolean bingoCheck(){
 		int whichp;
-		if(!players)
+		if(players)
 			whichp=1;
 		else
 			whichp=2;
