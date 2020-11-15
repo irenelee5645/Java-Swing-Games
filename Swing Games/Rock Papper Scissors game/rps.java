@@ -88,8 +88,8 @@ class MyFrame extends JFrame implements ActionListener{
 		BufferedImage img3=null;
 		try{
 			img1=ImageIO.read(new File("rock.png"));
-			img1=ImageIO.read(new File("paper.png"));
-			img1=ImageIO.read(new File("scissors.png"));
+			img2=ImageIO.read(new File("paper.png"));
+			img3=ImageIO.read(new File("scissors.png"));
 		}catch(Exception e){
 			System.out.println("file could not be found...");
 		}
